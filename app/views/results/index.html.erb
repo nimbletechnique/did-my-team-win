@@ -1,0 +1,35 @@
+<%= render :partial => "form" %>
+<% if @game %>
+  <div id="simple">
+    <h1><%= @team.name %> : <%= game_time(@game) %></h1>
+    <h2><%= game_teams(@game) %></h2>
+    <center>
+      <% if win?(@game) %>
+        <div class="big yes">YES</div>
+      <% else %>
+        <div class="big no">NO</div>
+      <% end %>
+    </center>
+  </div>
+  <div id="extended" style="display:none">
+    <h1><%= @team.name %> : <%= game_time(@game) %></h1>
+    <h2><%= game_teams(@game) %></h2>
+    <table>
+      <tr>
+        <td class="team"><%= @game.away_team.name %></td>
+        <td class="score"><%= @game.away_team_score %></td>
+      </tr>
+      <tr>
+        <td class="team"><%= @game.home_team.name %></td>
+        <td class="score"><%= @game.home_team_score %></td>
+      </tr>
+    </table>
+    <% if win?(@game) %>
+      <div id="win">
+        <%= @team.name.upcase %> WINS
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  No recent game data available. Hang tight!
+<% end %>

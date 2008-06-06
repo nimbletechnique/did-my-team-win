@@ -1,0 +1,4 @@
+<% form_tag :action => "select_team" do %>
+  <%= select_tag "team", options_for_select(teams_for_select, (@team ? @team.id : nil)) %>
+  <%= submit_tag "This Team" %>
+<% end %>

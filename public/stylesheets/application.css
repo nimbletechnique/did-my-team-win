@@ -1,0 +1,21 @@
+* {
+  font-family: verdana, "Lucida Grande", arial, helvetica, sans-serif;
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.big {
+  font-size: 250px;
+  font-weight: bold;
+}
+
+.yes {
+  color: blue;
+}
+
+.no {
+  color: red;
+}
