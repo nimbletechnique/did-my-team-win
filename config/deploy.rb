@@ -3,10 +3,12 @@ set :user, "collin"
 set :host, "#{user}@gluedtomyseat.com"
 
 set :scm, :git
-set :repository,  "git://github.com/oculardisaster/did-my-team-win.git"
+set :repository, "git@github.com:oculardisaster/did-my-team-win.git"
 
 set :deploy_to, "/home/#{user}/web/rails/#{application}"
 set :runner, user
+set :ssh_options, { :forward_agent => true }
+set :branch, "origin/master"
 
 role :app, "#{host}"
 role :web, "#{host}"
