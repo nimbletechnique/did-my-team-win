@@ -12,7 +12,8 @@ class ResultsController < ApplicationController
   def select_team
     if request.post?
       team = Team.find(params[:team])
-      cookies[:team] = "#{team.id}"
+      
+      cookies[:team] = { :value => "#{team.id}", :expires => 365.days.from_now }
       redirect_to :action => "index" and return
     end
   end
