@@ -6,7 +6,7 @@ class ResultsController < ApplicationController
   
   def index
     @games = Game.find_recent_for_team(@team)
-    @game = @games.first if @games.first.game_date >= 2.days.ago.beginning_of_day 
+    @game = @games.first if @games.first and @games.first.game_date >= 2.days.ago.beginning_of_day 
   end
   
   def select_team
