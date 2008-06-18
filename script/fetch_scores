@@ -1,1 +1,3 @@
 /home/collin/web/rails/didmyteamwin/current/script/runner 'Scores.new.fetch'
+/home/collin/web/rails/didmyteamwin/current/script/runner 'Scores.new(1.day.ago).fetch'
+/home/collin/web/rails/didmyteamwin/current/script/runner 'Scores.new(2.days.ago).fetch'

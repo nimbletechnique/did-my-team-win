@@ -8,7 +8,7 @@ set :repository, "git@github.com:oculardisaster/did-my-team-win.git"
 set :deploy_to, "/home/#{user}/web/rails/#{application}"
 set :runner, user
 set :ssh_options, { :forward_agent => true }
-set :branch, "origin/master"
+set :branch, "master"
 
 role :app, "#{host}"
 role :web, "#{host}"
