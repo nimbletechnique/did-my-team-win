@@ -20,6 +20,7 @@ role :db,  "#{host}", :primary => true
 
 after 'deploy:symlink' do
   run "cp #{deploy_to}/shared/database.yml #{deploy_to}/current/config"
+  run "cp #{deploy_to}/shared/mongrel_cluster.yml #{deploy_to}/current/config"
 end
 
 after "deploy" do
