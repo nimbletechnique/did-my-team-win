@@ -1,11 +1,15 @@
+require 'mongrel_cluster/recipes'
+
 set :application, "didmyteamwintoday"
 set :user, "deploy"
 set :host, "#{user}@gluedtomyseat.com"
+set :use_sudo, false
 
 set :scm, :git
 set :repository, "git@github.com:oculardisaster/did-my-team-win.git"
 
 set :deploy_to, "/var/www/apps/#{application}"
+set :mongrel_conf, "#{current_path}/config/mongrel_cluster.yml"
 set :runner, user
 set :ssh_options, { :forward_agent => true }
 set :branch, "master"

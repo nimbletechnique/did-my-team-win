@@ -1,5 +1,5 @@
 --- 
-log_file: log/mongrel.log
+log_file: /var/www/apps/didmyteamwintoday/shared/log/mongrel.log
 port: 13000
 pid_file: tmp/pids/mongrel.pid
 servers: 1
