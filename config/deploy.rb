@@ -23,6 +23,3 @@ after 'deploy:symlink' do
   run "cp #{deploy_to}/shared/mongrel_cluster.yml #{deploy_to}/current/config"
 end
 
-after "deploy" do
-  run "RAILS_ENV=production #{current_path}/script/fetch_scores"
-end
