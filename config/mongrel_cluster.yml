@@ -1,0 +1,6 @@
+--- 
+log_file: log/mongrel.log
+port: 13000
+pid_file: tmp/pids/mongrel.pid
+servers: 1
+environment: production
